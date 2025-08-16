@@ -7,28 +7,33 @@
     <title>Kanban Board</title>
 </head>
 <body>
-    
-    
-            <div class="row p-4 m-2 rounded-lg shadow-xl border-gray-200 border-2">
-                <h1 class="text-center text-xxl font-bold">This is Kanban board</h1>
-            </div>
-            <div class="flex" style=" height:80vh">
-                <div class="board rounded-lg m-1 ml-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="todoCard">
-                    <h5 class=" font-bold mb-2">Todo</h5>
-                    <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks1" >Task 1</p>
-                    <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks2" >Task 2</p>
-                    <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks3" >Task 3</p>
-                </div>
-                <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inProgressCard">  <h5 class=" font-bold mb-2">In-Progess</h5></div>
-                <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inReviewCard">  <h5 class="font-bold mb-2">In-Review</h5></div>
-                <div class="board rounded-lg m-1 mr-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="acceptCard">  <h5 class=" font-bold mb-2">Accept</h5></div>
-            </div>
-            <div class="row p-1 mt-0 rounded text-center">
-                <button type="button" class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add Task</button>
-            </div>
-                
-
+    <div class="row p-4 m-2 rounded-lg shadow-xl border-gray-200 border-2">
+        <h1 class="text-center text-xxl font-bold">This is Kanban board</h1>
+    </div>
+    <div class="flex" style=" height:80vh">
+        <div class="board rounded-lg m-1 ml-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="todoCard">
+            <h5 class=" font-bold mb-2">Todo</h5>
+            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks1">Task 1</p>
+            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks2">Task 2</p>
+            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks3">Task 3</p>
+        </div>
+        <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inProgressCard">
+            <h5 class=" font-bold mb-2">In-Progess</h5>
+        </div>
+        <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inReviewCard">
+            <h5 class="font-bold mb-2">In-Review</h5>
+        </div>
+        <div class="board rounded-lg m-1 mr-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="acceptCard">
+            <h5 class=" font-bold mb-2">Accept</h5>
+        </div>
+    </div>
+    <div class="row p-1 mt-0 rounded text-center">
+        <button type="button"
+            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
+            Task</button>
+    </div>
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
     <script src="script.js"></script>
 </body>
+
 </html>

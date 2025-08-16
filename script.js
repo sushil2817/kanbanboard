@@ -4,7 +4,9 @@ const inreviewCard = document.getElementById('inreviewCard');
 const acceptCard = document.getElementById('acceptCard');
 
 
+
 const allBoards = document.querySelectorAll('.board');
+
 
 allBoards.forEach(board =>{
     board.addEventListener('dragover',()=>{

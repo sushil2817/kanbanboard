@@ -1,9 +1,26 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
+.popup-overlay {
+      display: none;
+    }
 
-@theme {
-        --color-clifford: #da373d;
-}
+    .popup-overlay.active {
+      display: flex !important;
+    }
+
+    .taskItems:hover {
+      background-color: #e2e8f0;
+      cursor: grab;
+      transition: all 0.2s ease-in-out;
+    }
+
+    .taskItems:active {
+      cursor: grabbing;
+    }
+
+    .board:hover {
+      background-color: #f8fafc;
+    }
+
+    .flying {
+      opacity: 0.7;
+      transform: scale(1.05);
+    }

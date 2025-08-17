@@ -1,38 +1,63 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
     <link rel="stylesheet" href="style.css">
-    <title>Kanban Board</title>
+
 </head>
-<body>
-    <div class="row p-4 m-2 rounded-lg shadow-xl border-gray-200 border-2">
-        <h1 class="text-center text-xxl font-bold">This is Kanban board</h1>
+
+<body class="bg-gray-50 font-sans">
+
+    <div class="p-4 m-4 rounded-lg shadow-md border border-gray-200 bg-white">
+        <h1 class="text-center text-3xl font-bold text-gray-700">Kanban Board</h1>
     </div>
-    <div class="flex" style=" height:80vh">
-        <div class="board rounded-lg m-1 ml-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="todoCard">
-            <h5 class=" font-bold mb-2">Todo</h5>
-            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks1">Task 1</p>
-            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks2">Task 2</p>
-            <p class="border-1 border-gray-300 rounded p-3 mb-2 bg-gray-200" draggable="true" id="taks3">Task 3</p>
+    <div class="flex gap-4 px-4" style="height: 75vh;">
+        <div class="board rounded-lg p-4 w-1/4 h-full bg-white shadow border border-gray-200 overflow-y-auto"
+            id="todoCard">
+            <h5 class="font-bold mb-4 text-lg text-gray-700">To Do</h5>
         </div>
-        <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inProgressCard">
-            <h5 class=" font-bold mb-2">In-Progess</h5>
+        <div class="board rounded-lg p-4 w-1/4 h-full bg-white shadow border border-gray-200 overflow-y-auto"
+            id="inProgressCard">
+            <h5 class="font-bold mb-4 text-lg text-gray-700">In Progress</h5>
         </div>
-        <div class="board rounded-lg m-1 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="inReviewCard">
-            <h5 class="font-bold mb-2">In-Review</h5>
+        <div class="board rounded-lg p-4 w-1/4 h-full bg-white shadow border border-gray-200 overflow-y-auto"
+            id="inReviewCard">
+            <h5 class="font-bold mb-4 text-lg text-gray-700">In Review</h5>
         </div>
-        <div class="board rounded-lg m-1 mr-2 p-2 w-1/4 h-full shadow-xl/20 border-gray-200 border-2" id="acceptCard">
-            <h5 class=" font-bold mb-2">Accept</h5>
+        <div class="board rounded-lg p-4 w-1/4 h-full bg-white shadow border border-gray-200 overflow-y-auto"
+            id="acceptCard">
+            <h5 class="font-bold mb-4 text-lg text-gray-700">Accepted</h5>
         </div>
     </div>
-    <div class="row p-1 mt-0 rounded text-center">
-        <button type="button"
-            class="text-white bg-blue-700 hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 font-medium rounded-full text-sm px-5 py-2.5 text-center me-2 mb-2 mt-4 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800">Add
-            Task</button>
+
+    <div class="text-center mt-6">
+        <button id="openPopupBtn"
+            class="bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-2 rounded shadow">
+            + Add Task
+        </button>
     </div>
+
+    <div id="popupOverlay" class="popup-overlay fixed inset-0 bg-black bg-opacity-50 items-center justify-center z-50">
+        <div class="popup-content bg-white p-6 rounded-lg shadow-lg w-full max-w-md animate__animated animate__fadeIn">
+            <label class="block text-lg font-semibold mb-2 text-gray-700">Add Your Task</label>
+            <input type="text" id="taskText" placeholder="Enter your task"
+                class="block w-full px-4 py-2 text-gray-700 bg-white border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-500" />
+            <div class="flex justify-end gap-2 mt-4">
+                <button id="addTask"
+                    class="bg-green-600 hover:bg-green-700 text-white font-semibold px-4 py-2 rounded">Add</button>
+                <button id="closePopupBtn"
+                    class="bg-red-600 hover:bg-red-700 text-white font-semibold px-4 py-2 rounded">Close</button>
+            </div>
+        </div>
+    </div>
+
     <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <script src="https://cdn.tailwindcss.com"></script>
     <script src="script.js"></script>
 </body>
 
